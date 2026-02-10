@@ -62,6 +62,19 @@ const yesNoGrammar: { [index: string]: boolean } = {
   never: false,
 };
 
+// Helper functions
+function getYesNo(utterance: string): boolean | null {
+  const key = utterance.toLowerCase();
+  return key in yesNoGrammar ? yesNoGrammar[key] : null;
+}
+
+function getDay(utterance: string) {
+  return grammar[utterance.toLowerCase()]?.day;
+}
+
+function getTime(utterance: string) {
+  return grammar[utterance.toLowerCase()]?.time;
+}
 
 function isInGrammar(utterance: string) {
   return utterance.toLowerCase() in grammar;
