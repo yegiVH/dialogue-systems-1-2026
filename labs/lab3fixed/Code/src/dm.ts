@@ -49,6 +49,20 @@ const grammar: { [index: string]: GrammarEntry } = {
   "14": { time: "14:00" },
 };
 
+const yesNoGrammar: { [index: string]: boolean } = {
+  yes: true,
+  yeah: true,
+  yep: true,
+  "of course": true,
+  sure: true,
+
+  no: false,
+  nope: false,
+  "no way": false,
+  never: false,
+};
+
+
 function isInGrammar(utterance: string) {
   return utterance.toLowerCase() in grammar;
 }
