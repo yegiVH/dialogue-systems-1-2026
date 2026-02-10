@@ -29,14 +29,24 @@ interface GrammarEntry {
 }
 
 const grammar: { [index: string]: GrammarEntry } = {
+  // people
   vlad: { person: "Vladislav Maraev" },
   bora: { person: "Bora Kara" },
   tal: { person: "Talha Bedir" },
   tom: { person: "Tom Södahl Bladsjö" },
+
+  // days
   monday: { day: "Monday" },
   tuesday: { day: "Tuesday" },
+  wednesday: { day: "Wednesday" },
+  thursday: { day: "Thursday" },
+  friday: { day: "Friday" },
+
+  // times
+  "9": { time: "09:00" },
   "10": { time: "10:00" },
   "11": { time: "11:00" },
+  "14": { time: "14:00" },
 };
 
 function isInGrammar(utterance: string) {
