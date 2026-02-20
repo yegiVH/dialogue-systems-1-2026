@@ -2,18 +2,18 @@
 # Lab 5 | Natural language understanding
 
 *Before you proceed*: pull the changes to your fork and update packages to the latest version in the correct directory (labs/lab5/Code):
-#+begin_src sh
+```sh
 npm install
-#+end_src
+```  
 
 If something is broken/corrupted try removing all the packages and re-install:
-#+begin_src sh
+```sh
 rm -rf node_modules package-lock.json
 npm install
 npm install xstate
 npm install speechstate@latest
 npm install @statelyai/inspect
-#+end_src
+```  
 
 ## Introduction & Preparation
 In this lab, we are going to build on what you have already built on lab3 (or rather lab3fixed!) except this machine will be smarter. We will achieve this with Natural Language Understanding (NLU) module of NLU.
