@@ -149,6 +149,7 @@ const dmMachine = setup({
   context: ({ spawn }) => ({
     spstRef: spawn(speechstate, { input: settings }),
     lastResult: null,
+    interpretation: null,
 
     person: undefined,
     day: undefined,
