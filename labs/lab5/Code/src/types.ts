@@ -15,7 +15,16 @@ export interface DMContext {
 
   interpretation: NLUObject | null;
 }
-export type DMEvents = SpeechStateExternalEvent | { type: "CLICK" } | { type: "DONE" };
+
+export type DMEvents = 
+  | SpeechStateExternalEvent
+  | { type: "CLICK" }
+  | { type: "DONE" }
+  | { type: "ASRTTS_READY" }
+  | { type: "RECOGNISED"; value: any; nluValue?: NLUObject }
+  | { type: "LISTEN_COMPLETE" }
+  | { type: "SPEAK_COMPLETE" };
+
 
 export interface Entity {
   category: string;
